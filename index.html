@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yongjip Kim</title>
+  <meta name="description" content="I use AI to turn data problems into simple, scalable systems." />
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121931;
+      --text: #e8ecf3;
+      --muted: #aeb7c6;
+      --accent: #7cc4ff;
+      --border: #26304d;
+      --maxw: 900px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    h1, h2, h3 { line-height: 1.2; margin: 0 0 16px; }
+    h1 { font-size: 42px; margin-top: 12px; }
+    h2 { font-size: 28px; margin-top: 56px; }
+    h3 { font-size: 20px; margin-top: 24px; }
+    p { margin: 0 0 16px; color: var(--muted); }
+    .lead {
+      font-size: 20px;
+      color: var(--text);
+      max-width: 760px;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    .meta { color: var(--muted); font-size: 14px; margin-top: 8px; }
+    .hero-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .hero-links a {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--card);
+    }
+    .mermaid {
+      margin-top: 18px;
+      overflow-x: auto;
+    }
+    code {
+      background: #0f1530;
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #dfe7ff;
+    }
+  </style>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">Yongjip Kim</div>
+    <h1>I use AI to turn data problems into simple, scalable systems.</h1>
+    <p class="lead">
+      I build data platforms, APIs, and decision systems that power real business operations.
+      Currently Director, Data Platform at Techtaka. Previously at Coupang.
+    </p>
+
+    <div class="hero-links">
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a>
+      <a href="https://github.com/YOUR-GITHUB">GitHub</a>
+      <a href="mailto:yongjip@techtaka.com">Email</a>
+    </div>
+
+    <h2>Selected Work</h2>
+
+    <div class="card">
+      <h3>Building an AI-Powered Text-to-SQL System to Scale Data Access</h3>
+      <p>
+        Ad-hoc data requests were a bottleneck. Simple questions could be answered quickly,
+        but more complex requests often required hours of research to identify the right tables,
+        columns, join patterns, and business definitions.
+      </p>
+      <p>
+        Instead of trying to make humans write SQL faster, I focused on making the underlying
+        knowledge reusable and accessible to AI.
+      </p>
+
+      <div class="mermaid">
+flowchart TD
+
+A[User Question] --> B[Domain / Table Selection]
+
+B --> C[Structured Knowledge Layer]
+C --> C1[Table Definitions]
+C --> C2[Column Semantics]
+C --> C3[Join Patterns]
+C --> C4[Business Terms]
+
+C --> D[AI Agent (Codex / Claude / Gemini)]
+
+D --> E[SQL Query Generation]
+
+E --> F[Run Query in Athena]
+
+F --> G{Syntax / Execution OK?}
+
+G -- No --> D
+G -- Yes --> H[Result QA / Data Validation]
+
+H --> I{Quality Check Passed?}
+
+I -- No --> D
+I -- Yes --> J[Deliver to Human]
+
+J --> K[Use Result / Update Knowledge if Needed]
+
+K --> C
+      </div>
+
+      <p class="meta">The key is not just the model. It is how the problem is structured.</p>
+
+      <ul>
+        <li>Built a structured metadata layer with table definitions, column meanings, join patterns, and business terms</li>
+        <li>Reduced ad-hoc query time from 4–10 hours to under 1 hour</li>
+        <li>Increased monthly ad-hoc capacity from around 20 to 50+</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>About</h3>
+      <p>
+        I work at the intersection of data engineering, analytics, and product.
+        Using AI coding agents, I build end-to-end systems—from data pipelines to APIs
+        and internal tools—that help teams make faster and better decisions.
+      </p>
+      <p>
+        I prefer simple, effective solutions over complex ones. I believe most complex problems
+        can be solved with well-designed systems that are easy to maintain and scale.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
