@@ -14,5 +14,5 @@ I use AI to turn data problems into simple, scalable systems.
 - Warehouse optimization & simulation  
 
 ## Links
-- 🌐 Website: https://yourname.github.io
-- 💼 LinkedIn: https://linkedin.com/in/yourname
+- 🌐 Website: https://yongjip.github.io
+- 💼 LinkedIn: https://www.linkedin.com/in/yongjip/
