@@ -4,79 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yongjip Kim</title>
-  <meta name="description" content="I use AI to turn data problems into simple, scalable systems." />
 
   <style>
-    :root {
-      --bg: #0b1020;
-      --card: #121931;
-      --text: #e8ecf3;
-      --muted: #aeb7c6;
-      --accent: #7cc4ff;
-      --border: #26304d;
-      --maxw: 900px;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
+      background: #0b1020;
+      color: #e8ecf3;
+      line-height: 1.6;
     }
     .wrap {
-      max-width: var(--maxw);
+      max-width: 900px;
       margin: 0 auto;
-      padding: 48px 20px 80px;
+      padding: 48px 20px;
     }
-    h1, h2, h3 { line-height: 1.2; margin: 0 0 16px; }
-    h1 { font-size: 42px; margin-top: 12px; }
-    h2 { font-size: 28px; margin-top: 56px; }
-    h3 { font-size: 20px; margin-top: 24px; }
-    p { margin: 0 0 16px; color: var(--muted); }
-    .lead {
-      font-size: 20px;
-      color: var(--text);
-      max-width: 760px;
+    h1 { font-size: 40px; }
+    h2 { margin-top: 50px; }
+    p { color: #aeb7c6; }
+
+    .btn {
+      border: 1px solid #333;
+      padding: 6px 12px;
+      margin-right: 8px;
+      cursor: pointer;
+      display: inline-block;
     }
-    .kicker {
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
+
+    .hidden { display: none; }
+
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-top: 24px;
-    }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; color: var(--muted); }
-    a { color: var(--accent); text-decoration: none; }
-    .meta { color: var(--muted); font-size: 14px; margin-top: 8px; }
-    .hero-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
+      background: #121931;
+      padding: 20px;
+      border-radius: 12px;
       margin-top: 20px;
     }
-    .hero-links a {
-      border: 1px solid var(--border);
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--card);
-    }
+
     .mermaid {
-      margin-top: 18px;
-      overflow-x: auto;
-    }
-    code {
-      background: #0f1530;
-      border: 1px solid var(--border);
-      padding: 2px 6px;
-      border-radius: 6px;
-      color: #dfe7ff;
+      margin-top: 20px;
     }
   </style>
 
@@ -85,88 +49,77 @@
     mermaid.initialize({ startOnLoad: true, theme: 'dark' });
   </script>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="kicker">Yongjip Kim</div>
+<div class="wrap">
+
+  <!-- Language Toggle -->
+  <div>
+    <span class="btn" onclick="setLang('en')">EN</span>
+    <span class="btn" onclick="setLang('kr')">KR</span>
+  </div>
+
+  <!-- HERO -->
+  <div id="en">
     <h1>I use AI to turn data problems into simple, scalable systems.</h1>
-    <p class="lead">
-      I build data platforms, APIs, and decision systems that power real business operations.
-      Currently Director, Data Platform at Techtaka. Previously at Coupang.
-    </p>
+    <p>I build data platforms, APIs, and decision systems that power real business operations.</p>
+  </div>
 
-    <div class="hero-links">
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a>
-      <a href="https://github.com/YOUR-GITHUB">GitHub</a>
-      <a href="mailto:yongjip@techtaka.com">Email</a>
+  <div id="kr" class="hidden">
+    <h1>AI를 활용해 데이터 문제를 단순하고 확장 가능한 시스템으로 만듭니다.</h1>
+    <p>데이터 플랫폼, API, 의사결정 시스템을 만들어 실제 비즈니스 운영을 지원합니다.</p>
+  </div>
+
+  <!-- PROJECT -->
+  <h2>Selected Work</h2>
+
+  <div class="card">
+    <div id="en-project">
+      <h3>AI-Powered Text-to-SQL System</h3>
+      <p>Reduced ad-hoc analysis time from hours to under one hour.</p>
     </div>
 
-    <h2>Selected Work</h2>
+    <div id="kr-project" class="hidden">
+      <h3>AI 기반 Text-to-SQL 시스템</h3>
+      <p>애드혹 분석 시간을 수 시간에서 1시간 이하로 단축.</p>
+    </div>
 
-    <div class="card">
-      <h3>Building an AI-Powered Text-to-SQL System to Scale Data Access</h3>
-      <p>
-        Ad-hoc data requests were a bottleneck. Simple questions could be answered quickly,
-        but more complex requests often required hours of research to identify the right tables,
-        columns, join patterns, and business definitions.
-      </p>
-      <p>
-        Instead of trying to make humans write SQL faster, I focused on making the underlying
-        knowledge reusable and accessible to AI.
-      </p>
-
-      <div class="mermaid">
+    <div class="mermaid">
 flowchart TD
-
-A[User Question] --> B[Domain / Table Selection]
-
-B --> C[Structured Knowledge Layer]
-C --> C1[Table Definitions]
-C --> C2[Column Semantics]
-C --> C3[Join Patterns]
-C --> C4[Business Terms]
-
-C --> D[AI Agent (Codex / Claude / Gemini)]
-
-D --> E[SQL Query Generation]
-
-E --> F[Run Query in Athena]
-
-F --> G{Syntax / Execution OK?}
-
-G -- No --> D
-G -- Yes --> H[Result QA / Data Validation]
-
-H --> I{Quality Check Passed?}
-
-I -- No --> D
-I -- Yes --> J[Deliver to Human]
-
-J --> K[Use Result / Update Knowledge if Needed]
-
-K --> C
-      </div>
-
-      <p class="meta">The key is not just the model. It is how the problem is structured.</p>
-
-      <ul>
-        <li>Built a structured metadata layer with table definitions, column meanings, join patterns, and business terms</li>
-        <li>Reduced ad-hoc query time from 4–10 hours to under 1 hour</li>
-        <li>Increased monthly ad-hoc capacity from around 20 to 50+</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>About</h3>
-      <p>
-        I work at the intersection of data engineering, analytics, and product.
-        Using AI coding agents, I build end-to-end systems—from data pipelines to APIs
-        and internal tools—that help teams make faster and better decisions.
-      </p>
-      <p>
-        I prefer simple, effective solutions over complex ones. I believe most complex problems
-        can be solved with well-designed systems that are easy to maintain and scale.
-      </p>
+A[Question] --> B[Metadata]
+B --> C[AI]
+C --> D[SQL]
+D --> E[Result]
     </div>
   </div>
+
+  <!-- ABOUT -->
+  <div class="card">
+    <div id="en-about">
+      <h3>About</h3>
+      <p>I build end-to-end systems using AI, from data pipelines to internal tools.</p>
+    </div>
+
+    <div id="kr-about" class="hidden">
+      <h3>소개</h3>
+      <p>AI를 활용하여 데이터 파이프라인부터 내부 도구까지 end-to-end 시스템을 구축합니다.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function setLang(lang) {
+  document.getElementById('en').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('kr').classList.toggle('hidden', lang !== 'kr');
+
+  document.getElementById('en-project').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('kr-project').classList.toggle('hidden', lang !== 'kr');
+
+  document.getElementById('en-about').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('kr-about').classList.toggle('hidden', lang !== 'kr');
+}
+</script>
+
 </body>
 </html>
