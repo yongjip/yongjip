@@ -2,7 +2,7 @@
 
 I build practical data systems, developer tools, and games.
 
-Director, Data Platform at **Techtaka**; previously **Coupang**. I work on data platforms, analytics workflows, and AI-assisted tools for operational teams.
+Head of Data Platform at **Techtaka**; previously **Coupang**. I work on data platforms, analytics workflows, and AI-assisted tools for operational teams.
 
 Alongside that work, I run [Oddfini](https://oddfini.com/), an independent game and software business. I also make [TERATORN](https://oddfini.com/products/teratorn/), a strategy board game set on Mars, and [Codex Control](https://oddfini.com/products/codex-control/), a Stream Deck plugin for Codex task settings.
 
