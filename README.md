@@ -10,9 +10,15 @@ I build games and software under [Oddfini](https://oddfini.com/). Projects inclu
 
 | Project | What it does |
 | --- | --- |
-| [mergetrain](https://github.com/yongjip/mergetrain) | Integrates parallel coding-agent branches in order, validates the combined result, and supports approved atomic pushes and recovery. |
+| [mergetrain](https://github.com/yongjip/mergetrain) | A local merge queue for parallel coding agents, with combined checks, approved atomic pushes, and interrupted-push recovery. |
+| [song2mv](https://github.com/yongjip/song2mv) | An alpha CLI that aligns lyrics to audio and beat grids, with LRC/SRT and word-level timing output. |
 | [Whir](https://github.com/yongjip/whir) | A macOS menu bar app that estimates the API-equivalent value of Claude Code and Codex usage from local logs. |
 | [lfpolicy](https://github.com/yongjip/lfpolicy) | Reviews AWS Lake Formation permissions, explains access, detects drift, and plans policy changes. |
+
+## Open-source contributions
+
+- **PhotoCraft** — Fixed Liquify source-read bounds to prevent tile-edge artifacts during cubic interpolation. [Merged PR #8087](https://github.com/storytold/photocraft/pull/8087).
+- **Streamlit** — Reported AppTest and Components v2 bugs that maintainers fixed: [#17249](https://github.com/streamlit/streamlit/issues/17249), [#17216](https://github.com/streamlit/streamlit/issues/17216), and [#17215](https://github.com/streamlit/streamlit/issues/17215).
 
 ## Selected data systems work
 
