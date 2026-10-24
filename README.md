@@ -18,7 +18,7 @@ I build games and software under [Oddfini](https://oddfini.com/). Projects inclu
 ## Open-source contributions
 
 - **PhotoCraft** — Fixed Liquify source-read bounds to prevent tile-edge artifacts during cubic interpolation. [Merged PR #8087](https://github.com/storytold/photocraft/pull/8087).
-- **Streamlit** — Reported AppTest and Components v2 bugs that maintainers fixed: [#17249](https://github.com/streamlit/streamlit/issues/17249), [#17216](https://github.com/streamlit/streamlit/issues/17216), and [#17215](https://github.com/streamlit/streamlit/issues/17215).
+- **Streamlit** — Reproduced and diagnosed AppTest and Components v2 bugs. All three reports led to merged fixes: [#17249 → #17305](https://github.com/streamlit/streamlit/pull/17305), [#17216 → #17331](https://github.com/streamlit/streamlit/pull/17331), and [#17215 → #17471](https://github.com/streamlit/streamlit/pull/17471).
 
 ## Selected data systems work
 
